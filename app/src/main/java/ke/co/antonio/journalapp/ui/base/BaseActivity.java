@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import java.util.concurrent.atomic.AtomicLong;
 
 import timber.log.Timber;
-import ke.co.antonio.journalapp.BoilerplateApplication;
+import ke.co.antonio.journalapp.JournalApplication;
 import ke.co.antonio.journalapp.injection.component.ActivityComponent;
 import ke.co.antonio.journalapp.injection.component.ConfigPersistentComponent;
 import ke.co.antonio.journalapp.injection.component.DaggerConfigPersistentComponent;
@@ -42,7 +42,7 @@ public class BaseActivity extends AppCompatActivity {
         if (configPersistentComponent == null) {
             Timber.i("Creating new ConfigPersistentComponent id=%d", mActivityId);
             configPersistentComponent = DaggerConfigPersistentComponent.builder()
-                    .applicationComponent(BoilerplateApplication.get(this).getComponent())
+                    .applicationComponent(JournalApplication.get(this).getComponent())
                     .build();
             sComponentsMap.put(mActivityId, configPersistentComponent);
         }

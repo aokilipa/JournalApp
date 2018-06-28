@@ -97,6 +97,7 @@ dependencies {
     def mockito = "org.mockito:mockito-core:$MOCKITO_VERSION"
 
     // App Dependencies
+    implementation 'com.google.firebase:firebase-core:16.0.0'
     implementation "com.google.android.gms:play-services-gcm:$PLAY_SERVICES_VERSION"
     implementation "com.android.support:appcompat-v7:$SUPPORT_LIBRARY_VERSION"
     implementation "com.android.support:recyclerview-v7:$SUPPORT_LIBRARY_VERSION"
@@ -116,6 +117,7 @@ dependencies {
     }
     implementation 'com.jakewharton.timber:timber:4.1.2'
     implementation "com.jakewharton:butterknife:$BUTTERKNIFE_VERSION"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     annotationProcessor "com.jakewharton:butterknife-compiler:$BUTTERKNIFE_VERSION"
 
     // Replace provided dependency below with official AutoValue once this issue is fixed
@@ -140,7 +142,7 @@ dependencies {
     // Instrumentation test dependencies
     androidTestImplementation jUnit
     androidTestImplementation mockito
-    androidTestImplementation"org.mockito:mockito-android:$MOCKITO_VERSION"
+    androidTestImplementation "org.mockito:mockito-android:$MOCKITO_VERSION"
     androidTestImplementation "com.android.support:support-annotations:$SUPPORT_LIBRARY_VERSION"
     androidTestImplementation("com.android.support.test.espresso:espresso-contrib:$ESPRESSO_VERSION") {
         exclude group: 'com.android.support', module: 'appcompat'
@@ -161,6 +163,8 @@ dependencies {
 }
 
 // Log out test results to console
-tasks.matching {it instanceof Test}.all {
+tasks.matching { it instanceof Test }.all {
     testLogging.events = ["failed", "passed", "skipped"]
 }
+
+apply plugin: 'com.google.gms.google-services'

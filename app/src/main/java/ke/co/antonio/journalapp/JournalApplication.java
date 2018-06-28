@@ -11,7 +11,7 @@ import ke.co.antonio.journalapp.injection.component.ApplicationComponent;
 import ke.co.antonio.journalapp.injection.component.DaggerApplicationComponent;
 import ke.co.antonio.journalapp.injection.module.ApplicationModule;
 
-public class BoilerplateApplication extends Application  {
+public class JournalApplication extends Application  {
 
     ApplicationComponent mApplicationComponent;
 
@@ -25,8 +25,8 @@ public class BoilerplateApplication extends Application  {
         }
     }
 
-    public static BoilerplateApplication get(Context context) {
-        return (BoilerplateApplication) context.getApplicationContext();
+    public static JournalApplication get(Context context) {
+        return (JournalApplication) context.getApplicationContext();
     }
 
     public ApplicationComponent getComponent() {

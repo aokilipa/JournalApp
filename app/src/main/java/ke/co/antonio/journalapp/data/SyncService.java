@@ -14,7 +14,7 @@ import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import timber.log.Timber;
-import ke.co.antonio.journalapp.BoilerplateApplication;
+import ke.co.antonio.journalapp.JournalApplication;
 import ke.co.antonio.journalapp.data.model.Ribot;
 import ke.co.antonio.journalapp.util.AndroidComponentUtil;
 import ke.co.antonio.journalapp.util.NetworkUtil;
@@ -36,7 +36,7 @@ public class SyncService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        BoilerplateApplication.get(this).getComponent().inject(this);
+        JournalApplication.get(this).getComponent().inject(this);
     }
 
     @Override
