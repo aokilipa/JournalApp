@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">JournalApp</string>
+    <string name="app_name">My Journal</string>
 
     <string name="action_settings">Settings</string>
 
@@ -9,4 +9,10 @@
 
     <string name="empty_ribots">There aren\'t any ribots</string>
     <string name="error_loading_ribots">There was a problem loading the ribots</string>
+    <string name="example_email">example@email.com</string>
+    <string name="sign_in_using_google">sign in using google</string>
+    <string name="signin_label">Please sign in to continue</string>
+    <string name="server_client_id">232160656881-klblk753gq9ctecvhir9o08ullel9n5v.apps.googleusercontent.com</string>
+    <string name="app_title">My Journal </string>
+    <string name="signup_label">Please signup to continue...</string>
 </resources>

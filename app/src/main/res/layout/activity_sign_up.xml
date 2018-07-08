@@ -23,7 +23,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/signin_label"
+            android:text="@string/signup_label"
             android:padding="8dp"
             android:textStyle="italic"
             android:textAlignment="center"
@@ -43,74 +43,48 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:padding="4dp">
+        android:padding="8dp">
         <EditText
+            android:id="@+id/et_firstname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/example_email"/>
+            android:hint="Firstname"
+            android:layout_marginBottom="@dimen/edit_text_margin_bottom"/>
         <EditText
+            android:id="@+id/et_lastname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lastname"
+            android:layout_marginBottom="@dimen/edit_text_margin_bottom"/>
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/example_email"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="@dimen/edit_text_margin_bottom"/>
+        <EditText
+            android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:hint="password"/>
+            android:hint="password"
+            android:layout_marginBottom="@dimen/edit_text_margin_bottom"/>
+        <EditText
+            android:id="@+id/et_confirm_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="confirm password"
+            android:layout_marginBottom="@dimen/edit_text_margin_bottom"/>
 
         <Button
+            android:id="@+id/btn_register"
             style="@style/Base.Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login" />
-        <Button
-            android:id="@+id/btn_sign_up"
-            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sign Up" />
+            android:text="Sign Up"
+            android:layout_margin="8dp"/>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="4dp">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="or"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="12sp" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/sign_in_using_google"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textSize="14sp"
-        android:textStyle="italic"
-        android:typeface="normal" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="4dp">
-
-       <com.google.android.gms.common.SignInButton
-           android:id="@+id/sign_in_button"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content" />
-
-
-    </LinearLayout>
-
-
-
-
-
 
 </LinearLayout>

@@ -97,7 +97,9 @@ dependencies {
     def mockito = "org.mockito:mockito-core:$MOCKITO_VERSION"
 
     // App Dependencies
-    implementation 'com.google.firebase:firebase-core:16.0.0'
+    implementation 'com.google.firebase:firebase-core:16.0.1'
+    implementation 'com.google.firebase:firebase-auth:16.0.2'
+    implementation "com.google.android.gms:play-services-auth:$PLAY_SERVICES_VERSION"
     implementation "com.google.android.gms:play-services-gcm:$PLAY_SERVICES_VERSION"
     implementation "com.android.support:appcompat-v7:$SUPPORT_LIBRARY_VERSION"
     implementation "com.android.support:recyclerview-v7:$SUPPORT_LIBRARY_VERSION"
@@ -160,6 +162,7 @@ dependencies {
     testImplementation "org.hamcrest:hamcrest-library:$HAMCREST_VERSION"
     testImplementation "org.hamcrest:hamcrest-integration:$HAMCREST_VERSION"
     testImplementation 'org.robolectric:robolectric:3.3'
+    implementation 'com.android.support:design:27.1.1'
 }
 
 // Log out test results to console

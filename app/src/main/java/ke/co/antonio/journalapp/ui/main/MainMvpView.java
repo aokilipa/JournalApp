@@ -1,5 +1,7 @@
 package ke.co.antonio.journalapp.ui.main;
 
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+
 import java.util.List;
 
 import ke.co.antonio.journalapp.data.model.Ribot;
@@ -13,4 +15,5 @@ public interface MainMvpView extends MvpView {
 
     void showError();
 
+    //void firebaseAuthWithGoogle(GoogleSignInAccount acct);
 }
